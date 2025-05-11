@@ -15,7 +15,7 @@ const StyledWrapper = styled.div`
   .spinner {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 48%;
     width: 3em;
     height: 3em;
     cursor: not-allowed;
