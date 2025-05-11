@@ -19,7 +19,7 @@ const Homepage = () => {
         <source src={AnimatedVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="relative min-h-screen shaded-bg top-1/3 w-full flex flex-col justify-start pt-40 gap-3 p-3 text-white">
+      <div className="relative min-h-screen shaded-bg top-1/2 w-full flex flex-col justify-start pt-50 gap-3 p-3 text-white">
         <h6 className="font-bold">Real Estate Searching Platform</h6>
         <h1 className="mt-2 text-4xl max-w-screen-sm w-full font-bold">
           Find The House of Your Dream Using Our DevineHomz Platform
