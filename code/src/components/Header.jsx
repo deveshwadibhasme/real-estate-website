@@ -1,4 +1,4 @@
-import logo from "/public/Devine.png";
+import logo from "/public/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faContactBook,
@@ -39,17 +39,17 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full  shadow-md z-50">
+    <header className="fixed top-0 left-0 w-full pt-5 shadow-md z-50">
       <div className="flex items-center justify-between flex-col bg-slate-800 md:bg-transparent md:flex-row min-h-15 text-white px-0 md:px-5">
         <div className="max-w-25 h-20 w-full m-1 flex items-center justify-center">
-          <img src={logo} alt="logo" />
+          <img src={logo} className="bg-white/60" alt="logo" />
         </div>
-        <nav className="flex overflow-x-auto justify-between max-w-4xl md:max-w-2xl w-full border-t-0 md:border-t-1">
+        <nav className="flex overflow-x-auto justify-between max-w-4xl md:max-w-2xl w-full border-t-0 md:border-t-2">
           {tabs.map((tab) => (
             <Link
               key={tab.title}
               to={tab.link}
-              className="flex items-center text-lg md:bg-amber-50/10 flex-shrink-0 px-4 py-2 text-white hover:text-gray-400"
+              className="flex items-center text-lg md:bg-blue-500/70 flex-shrink-0 px-4 py-2 text-white hover:bg-blue-600 transition duration-300 ease-in-out whitespace-nowrap"
             >
               {tab.icon}
               <span className="ml-2 w-full">{tab.title}</span>

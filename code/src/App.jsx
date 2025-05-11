@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { Suspense } from "react";
 import Header from "./components/Header";
 import { Outlet } from "react-router-dom";
+import Loader from "./components/Loader";
 
 function App() {
-
-
   return (
     <>
-      <Header/>
-      <Outlet/>
+      <Suspense fallback={<Loader />}>
+        <Header />
+        <Outlet />
+      </Suspense>
     </>
   );
 }

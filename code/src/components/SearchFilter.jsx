@@ -4,7 +4,7 @@ import { faSearch, faBuilding, faCity } from "@fortawesome/free-solid-svg-icons"
 
 const SearchFilter = () => {
     const selectValue = {
-        type: ["All Type", "Nothing Here"],
+        type: ["Prices", "50 Lakh - 1 Crore", "1 Crore - 2 Crore", "2 Crore - 5 Crore", "5 Crore - 7 Crore"],
         cities: ["All Cities", "Laxminagar", "Manewada"],
     };
 
@@ -17,11 +17,13 @@ const SearchFilter = () => {
     const handleTypeSelect = (type) => {
         setSelectedType(type);
         setIsTypeDropdownOpen(false);
+        setIsCityDropdownOpen(false);
     };
 
     const handleCitySelect = (city) => {
         setSelectedCity(city);
         setIsCityDropdownOpen(false);
+        setIsTypeDropdownOpen(false);
     };
 
     const handleSearch = (e) => {
