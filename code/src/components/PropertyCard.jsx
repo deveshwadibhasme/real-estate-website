@@ -8,18 +8,18 @@ const PropertyCard = ({ property }) => {
   return (
     <motion.div
       key={property.id}
-      className="w-full grid grid-cols-1 gap-2 md:w-30 lg:w-80 bg-white shadow-lg rounded-lg p-4"
+      className="w-full grid grid-cols-1 gap-2 md:w-30 lg:w-96 bg-white shadow-lg rounded-lg p-4"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.8 }}
-      viewport={{ once: false, amount: 0.2 }} // Trigger animation when 20% of the component is in view
+      viewport={{ once: false, amount: 0.2 }}
     >
-      <div>
+      <div className="">
         <img
           src={property.imageUrl}
           alt={property.title}
-          className="w-full h-48 object-cover rounded-lg"
+          className="w-full h-70 object-cover rounded-lg "
         />
         <h3 className="text-2xl font-semibold mt-2">{property.title}</h3>
         <p className="text-gray-600">{property.location}</p>
