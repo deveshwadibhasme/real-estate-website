@@ -8,7 +8,7 @@ const PropertyCard = ({ property }) => {
   return (
     <motion.div
       key={property.id}
-      className="w-full grid grid-cols-1 gap-2 md:w-30 lg:w-96 bg-white shadow-lg rounded-lg p-4"
+      className="w-full grid grid-cols-1 gap-2 lg:max-w-96 bg-white shadow-lg rounded-lg p-4"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ scale: 1.05 }}
@@ -25,40 +25,23 @@ const PropertyCard = ({ property }) => {
         <p className="text-gray-600">{property.location}</p>
       </div>
       <div>
-        {property.twoBHK && (
-          <div className="flex justify-between mt-2">
-            <span className="text-gray-700 font-semibold ">
-               ₹ {property.twoBHK.price}
-            </span>
-            <div className="flex items-center gap-4">
-              <FontAwesomeIcon icon={faBed} className="text-gray-500" />
-              <span className="text-gray-500 font-serif">
-                {property.twoBHK.bedrooms}
-              </span>
-              <FontAwesomeIcon icon={faBath} className="text-gray-500" />
-              <span className="text-gray-500 font-serif">
-                {property.twoBHK.bathrooms}
-              </span>
+        {property.BHK &&
+          property.BHK.map((bhk) => (
+            <div
+              key={bhk.id}
+              className="flex justify-between items-center mt-2 font-mono"
+            >
+              <span className="text-gray-700 font-semibold font-mono">{bhk.type} ₹ {bhk.price}</span>
+              <div className="flex items-center gap-4">
+                <FontAwesomeIcon icon={faBed} className="text-gray-500" />
+                <span className="text-gray-500 font-serif">{bhk.bedrooms}</span>
+                <FontAwesomeIcon icon={faBath} className="text-gray-500" />
+                <span className="text-gray-500 font-serif">
+                  {bhk.bathrooms}
+                </span>
+              </div>
             </div>
-          </div>
-        )}
-        {property.threeBHK && (
-          <div className="flex justify-between items-center mt-2">
-            <span className="text-gray-700 font-semibold">
-               ₹ {property.threeBHK.price}
-            </span>
-            <div className="flex items-center gap-4">
-              <FontAwesomeIcon icon={faBed} className="text-gray-500" />
-              <span className="text-gray-500 font-serif">
-                {property.threeBHK.bedrooms}
-              </span>
-              <FontAwesomeIcon icon={faBath} className="text-gray-500" />
-              <span className="text-gray-500 font-serif">
-                {property.threeBHK.bathrooms}
-              </span>
-            </div>
-          </div>
-        )}
+          ))}
       </div>
       <Link className="p-2 h-10 px-4 self-end rounded-xl text-center uppercasse hover:bg-green-600 text-white bg-blue-400 font-semibold flex items-center justify-center">
         <FontAwesomeIcon icon={faForward} className="mr-2" />
