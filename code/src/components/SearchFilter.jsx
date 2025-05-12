@@ -49,20 +49,22 @@ const SearchFilter = () => {
 
   return (
     <form
-      className="max-w-screen-sm w-full flex flex-wrap md:flex-nowrap bg-white text-slate-900 h-15 items-center rounded-lg shadow-lg mt-4 overflow-hidden"
+      className="max-w-screen-sm w-full flex flex-wrap md:flex-nowrap bg-white text-slate-900 items-center rounded-lg shadow-lg mt-4 overflow-hidden h-full"
       onSubmit={handleSearch}
     >
-      <div className="relative w-full md:w-[30%]">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 , delay: 0.2 }}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="relative w-full md:w-[30%]"
+      >
+        <div
           className="h-14 md:h-15 border-b md:border-r-2 md:border-b-0 border-slate-400 outline-none p-2 font-semibold cursor-pointer flex items-center justify-between px-8"
           onClick={() => setIsTypeDropdownOpen(!isTypeDropdownOpen)}
         >
           <FontAwesomeIcon icon={faBuilding} className="mr-2 text-gray-500" />
           {selectedType}
-        </motion.div>
+        </div>
         {isTypeDropdownOpen && (
           <div className="absolute top-full left-0 w-full bg-white shadow-lg z-10">
             {selectValue.type.map((type) => (
@@ -76,15 +78,15 @@ const SearchFilter = () => {
             ))}
           </div>
         )}
-      </div>
+      </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 , delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
         className="relative w-full md:w-[30%]"
       >
         <div
-          className="h-14 md:h-15 border-b md:border-r-2 md:border-b-0 border-slate-400 outline-none p-2 font-semibold cursor-pointer flex items-center justify-between px-8 bg-white"
+          className="h-14 md:h-15 border-b md:border-r-2 md:border-b-0 border-slate-400 outline-none p-2 font-semibold cursor-pointer flex items-center justify-between px-8"
           onClick={() => setIsCityDropdownOpen(!isCityDropdownOpen)}
         >
           <FontAwesomeIcon icon={faCity} className="mr-2 text-gray-500" />
@@ -107,9 +109,9 @@ const SearchFilter = () => {
       <motion.button
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.4, delay: 0.4 ,ease: "circIn" }}
+        transition={{ duration: 0.4, delay: 0.4, ease: "circIn" }}
         type="submit"
-        className="h-14 cursor-pointer md:h-15 bg-blue-500 text-white font-semibold w-full md:w-[40%] rounded-b-lg md:rounded-r-lg md:rounded-b-none hover:bg-blue-600 transition-all z-0"
+        className="h-14 cursor-pointer md:h-15 bg-blue-500 text-white font-semibold w-full md:w-[40%] rounded-b-lg md:rounded-r-lg md:rounded-b-none hover:bg-blue-600 transition-all"
       >
         <FontAwesomeIcon icon={faSearch} className="mr-2" />
         Search

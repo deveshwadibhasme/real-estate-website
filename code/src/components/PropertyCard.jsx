@@ -2,12 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBed, faBath, faForward } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
-const PropertyCard = ({property}) => {
+const PropertyCard = ({ property }) => {
   return (
-    <div
+    <motion.div
       key={property.id}
       className="w-full grid grid-cols-1 gap-2 md:w-30 lg:w-80 bg-white shadow-lg rounded-lg p-4"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: false, amount: 0.2 }} // Trigger animation when 20% of the component is in view
     >
       <div>
         <img
@@ -22,23 +28,35 @@ const PropertyCard = ({property}) => {
         {property.twoBHK && (
           <div className="flex justify-between mt-2">
             <span className="text-gray-700 font-semibold ">
-              2BHK : ₹ {property.twoBHK.price}
+               ₹ {property.twoBHK.price}
             </span>
-            <FontAwesomeIcon icon={faBed} className="text-gray-500" />
-            <span className="text-gray-500 font-serif">{property.twoBHK.bedrooms}</span>
-            <FontAwesomeIcon icon={faBath} className="text-gray-500" />
-            <span className="text-gray-500 font-serif">{property.twoBHK.bathrooms}</span>
+            <div className="flex items-center gap-4">
+              <FontAwesomeIcon icon={faBed} className="text-gray-500" />
+              <span className="text-gray-500 font-serif">
+                {property.twoBHK.bedrooms}
+              </span>
+              <FontAwesomeIcon icon={faBath} className="text-gray-500" />
+              <span className="text-gray-500 font-serif">
+                {property.twoBHK.bathrooms}
+              </span>
+            </div>
           </div>
         )}
         {property.threeBHK && (
           <div className="flex justify-between items-center mt-2">
             <span className="text-gray-700 font-semibold">
-              3BHK : ₹ {property.threeBHK.price}
+               ₹ {property.threeBHK.price}
             </span>
-            <FontAwesomeIcon icon={faBed} className="text-gray-500" />
-            <span className="text-gray-500 font-serif">{property.threeBHK.bedrooms}</span>
-            <FontAwesomeIcon icon={faBath} className="text-gray-500" />
-            <span className="text-gray-500 font-serif">{property.threeBHK.bathrooms}</span>
+            <div className="flex items-center gap-4">
+              <FontAwesomeIcon icon={faBed} className="text-gray-500" />
+              <span className="text-gray-500 font-serif">
+                {property.threeBHK.bedrooms}
+              </span>
+              <FontAwesomeIcon icon={faBath} className="text-gray-500" />
+              <span className="text-gray-500 font-serif">
+                {property.threeBHK.bathrooms}
+              </span>
+            </div>
           </div>
         )}
       </div>
@@ -46,7 +64,7 @@ const PropertyCard = ({property}) => {
         <FontAwesomeIcon icon={faForward} className="mr-2" />
         Proceed
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

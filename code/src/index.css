@@ -5,6 +5,10 @@
     font-family: 'Grenze', sans-serif;
   }
 
+  #root{
+    overflow-x: hidden;
+  }
+
   .shaded-bg::after {
     content: "";
     position: absolute;
