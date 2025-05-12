@@ -5,7 +5,7 @@ import { faSearch, faBuilding, faCity } from "@fortawesome/free-solid-svg-icons"
 const SearchFilter = () => {
     const selectValue = {
         type: ["Prices", "50 Lakh - 1 Crore", "1 Crore - 2 Crore", "2 Crore - 5 Crore", "5 Crore - 7 Crore"],
-        cities: ["All Cities", "Laxminagar", "Manewada"],
+        cities: ["All Location", "Laxminagar", "Manewada"],
     };
 
     const [selectedType, setSelectedType] = useState(selectValue.type[0]);
@@ -38,25 +38,12 @@ const SearchFilter = () => {
 
     return (
         <form
-            className="max-w-screen-lg w-full flex flex-wrap md:flex-nowrap bg-white text-slate-900 rounded-lg shadow-lg mt-4"
+            className="max-w-screen-sm w-full flex flex-wrap md:flex-nowrap bg-white text-slate-900 h-15 items-center rounded-lg shadow-lg mt-4"
             onSubmit={handleSearch}
         >
-            <div className="relative w-full md:w-[40%] flex items-center">
-                <FontAwesomeIcon
-                    icon={faSearch}
-                    className="absolute left-3 text-gray-500"
-                />
-                <input
-                    type="text"
-                    placeholder="Search..."
-                    className="h-14 md:h-18 border-b md:border-r-2 md:border-b-0 border-slate-400 outline-none w-full pl-10 pr-4 font-semibold text-base md:text-lg rounded-t-lg md:rounded-l-lg md:rounded-t-none"
-                    value={searchInput}
-                    onChange={(e) => setSearchInput(e.target.value)}
-                />
-            </div>
-            <div className="relative w-full md:w-[20%]">
+            <div className="relative w-full md:w-[30%]">
                 <div
-                    className="h-14 md:h-18 border-b md:border-r-2 md:border-b-0 border-slate-400 outline-none p-2 font-semibold cursor-pointer flex items-center justify-between px-8"
+                    className="h-14 md:h-15 border-b md:border-r-2 md:border-b-0 border-slate-400 outline-none p-2 font-semibold cursor-pointer flex items-center justify-between px-8"
                     onClick={() => setIsTypeDropdownOpen(!isTypeDropdownOpen)}
                 >
                     <FontAwesomeIcon icon={faBuilding} className="mr-2 text-gray-500" />
@@ -76,9 +63,9 @@ const SearchFilter = () => {
                     </div>
                 )}
             </div>
-            <div className="relative w-full md:w-[20%]">
+            <div className="relative w-full md:w-[30%]">
                 <div
-                    className="h-14 md:h-18 border-b md:border-r-2 md:border-b-0 border-slate-400 outline-none p-2 font-semibold cursor-pointer flex items-center justify-between px-8"
+                    className="h-14 md:h-15 border-b md:border-r-2 md:border-b-0 border-slate-400 outline-none p-2 font-semibold cursor-pointer flex items-center justify-between px-8"
                     onClick={() => setIsCityDropdownOpen(!isCityDropdownOpen)}
                 >
                     <FontAwesomeIcon icon={faCity} className="mr-2 text-gray-500" />
@@ -100,7 +87,7 @@ const SearchFilter = () => {
             </div>
             <button
                 type="submit"
-                className="h-14 cursor-pointer md:h-18 bg-blue-500 text-white font-semibold w-full md:w-[20%] rounded-b-lg md:rounded-r-lg md:rounded-b-none hover:bg-blue-600 transition-all"
+                className="h-14 cursor-pointer md:h-15 bg-blue-500 text-white font-semibold w-full md:w-[40%] rounded-b-lg md:rounded-r-lg md:rounded-b-none hover:bg-blue-600 transition-all"
             >
                 <FontAwesomeIcon icon={faSearch} className="mr-2" />
                 Search

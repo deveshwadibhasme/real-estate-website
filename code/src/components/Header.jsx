@@ -46,8 +46,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full shadow-md z-50">
-      <div className="flex items-center justify-between relative py-2 bg-white md:bg-transparent min-h-15 text-white px-5">
+    <header className="fixed top-0 left-0 w-full z-50">
+      <div className="flex items-center justify-between relative bg-white md:bg-transparent min-h-15 text-white px-5">
         <div className="max-w-25 h-22">
           <img
             src={logo}

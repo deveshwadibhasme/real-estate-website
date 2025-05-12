@@ -5,40 +5,44 @@ export default [
     {
         id: 1,
         title: "Arohan 3BHK New Manish Nagar Nagpur",
-        price: "",
-        moreInfo: {
-            bedrooms: null,
-            bathrooms: null,
-            area: null,
+        twoBHK: {
+            price: "₹ 48 Lakh",
+            bedrooms: 2,
+            bathrooms: 2,
         },
-        location: "Arohan 3BHK New Manish Nagar Nagpur",
-        imageUrl: firstImage,
+        threeBHK: {
+            price: "₹ 78 Lakh",
+            bedrooms: 3,
+            bathrooms: 3, 
+        },
+        location: "Havrapeth Omkar Nagar, Nagpur",
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044673/IMG-20250512-WA0017_ejwcbk.jpg',
         dealer: "DevineHome Admin",
     },
     {
         id: 2,
-        title: "SkyBlue Oasis 2BHK Project, New Manish Nagar, Nagpur",
-        price: "₹ 5,200,000.00",
-            moreInfo: {
+        title: "Advait Elite",
+        twoBHK: {
+            price: "₹ 48 Lakh",
             bedrooms: 2,
             bathrooms: 2,
-            area: "1239 sq ft",
         },
+        threeBHK: false,
         location: "Manish Nagar, Nagpur",
-        imageUrl: secondImage,
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044683/IMG-20250512-WA0024_q8z6on.jpg',
         dealer: "Site Admin",
     },
-    {
+   {
         id: 3,
-        title: "Cozy Cottage in the Countryside",
-        price: "",
-        moreInfo: {
-            bedrooms: null,
-            bathrooms: null,
-            area: null,
+        title: "Advait Elite",
+        twoBHK: {
+            price: "₹ 48 Lakh",
+            bedrooms: 2,
+            bathrooms: 2,
         },
-        location: "",
-        imageUrl: thirdImage,
-        dealer: "Prabodh Ahmad",
+        threeBHK: false,
+        location: "Manish Nagar, Nagpur",
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044683/IMG-20250512-WA0024_q8z6on.jpg',
+        dealer: "Site Admin",
     },
-]
+];
