@@ -19,39 +19,39 @@ const Header = () => {
     {
       title: "Home",
       link: "/",
-      icon: <FontAwesomeIcon className="text-sm md:text-lg" icon={faHome} />,
+      icon: <FontAwesomeIcon className="text-sm" icon={faHome} />,
     },
     {
       title: "Listings",
       link: "/listing",
-      icon: <FontAwesomeIcon className="text-sm md:text-lg" icon={faList} />,
+      icon: <FontAwesomeIcon className="text-sm" icon={faList} />,
     },
     {
       title: "Agents List",
       link: "/agents",
       icon: (
-        <FontAwesomeIcon className="text-sm md:text-lg" icon={faPersonDotsFromLine} />
+        <FontAwesomeIcon className="text-sm" icon={faPersonDotsFromLine} />
       ),
     },
     {
       title: "About Us",
       link: "/about-us",
-      icon: <FontAwesomeIcon className="text-sm md:text-lg" icon={faInfoCircle} />,
+      icon: <FontAwesomeIcon className="text-sm" icon={faInfoCircle} />,
     },
     {
       title: "Contact Us",
       link: "/contact-us",
-      icon: <FontAwesomeIcon className="text-sm md:text-lg" icon={faContactBook} />,
+      icon: <FontAwesomeIcon className="text-sm" icon={faContactBook} />,
     },
   ];
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <div className="flex items-center justify-between relative bg-white md:bg-transparent min-h-15 text-white px-5">
-        <div className="max-w-25 h-22">
+        <div className="max-w-22 w-full min-h-22 rounded-full bg-white">
           <img
             src={logo}
-            className="md:bg-white rounded-full object-cover"
+            className="w-25 h-22 rounded-full object-cover"
             alt="logo"
           />
         </div>
@@ -70,7 +70,7 @@ const Header = () => {
             <Link
               key={tab.title}
               to={tab.link}
-              className="flex items-center text-sm md:text-lg md:bg-blue-500/70 flex-shrink-0 px-2 md:px-4 py-1 md:py-2 md:rounded-2xl text-white bg-blue-900 hover:bg-blue-600 transition duration-300 ease-in-out whitespace-nowrap"
+              className="flex items-center text-sm md:text-lg flex-shrink-0 px-2 md:px-4 py-1 md:py-1 md:rounded-sm text-white bg-logo hover:bg-blue-600 transition duration-300 ease-in-out whitespace-nowrap"
             >
               {tab.icon}
               <span className="ml-2 w-full">{tab.title}</span>

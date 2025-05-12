@@ -4,14 +4,14 @@ import thirdImage from "../assets/3.png";
 export default [
     {
         id: 1,
-        title: "Arohan 3BHK New Manish Nagar Nagpur",
+        title: "Arohan",
         twoBHK: {
-            price: "₹ 48 Lakh",
+            price: "48 Lakh",
             bedrooms: 2,
             bathrooms: 2,
         },
         threeBHK: {
-            price: "₹ 78 Lakh",
+            price: "63 Lakh",
             bedrooms: 3,
             bathrooms: 3, 
         },
@@ -23,7 +23,7 @@ export default [
         id: 2,
         title: "Advait Elite",
         twoBHK: {
-            price: "₹ 48 Lakh",
+            price: "48 Lakh",
             bedrooms: 2,
             bathrooms: 2,
         },
@@ -34,15 +34,15 @@ export default [
     },
    {
         id: 3,
-        title: "Advait Elite",
+        title: "Anandi Anand Residency",
         twoBHK: {
-            price: "₹ 48 Lakh",
+            price: "65 Laks",
             bedrooms: 2,
             bathrooms: 2,
         },
         threeBHK: false,
         location: "Manish Nagar, Nagpur",
-        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044683/IMG-20250512-WA0024_q8z6on.jpg',
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044695/IMG-20250512-WA0032_fc7wxn.jpg',
         dealer: "Site Admin",
     },
 ];

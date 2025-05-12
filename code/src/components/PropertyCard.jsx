@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBed, faBath } from "@fortawesome/free-solid-svg-icons";
+import { faBed, faBath, faForward } from "@fortawesome/free-solid-svg-icons";
 
 const PropertyCard = ({property}) => {
   return (
@@ -15,34 +15,35 @@ const PropertyCard = ({property}) => {
           alt={property.title}
           className="w-full h-48 object-cover rounded-lg"
         />
-        <h3 className="text-xl font-semibold mt-2">{property.title}</h3>
+        <h3 className="text-2xl font-semibold mt-2">{property.title}</h3>
         <p className="text-gray-600">{property.location}</p>
       </div>
       <div>
         {property.twoBHK && (
           <div className="flex justify-between mt-2">
-            <span className="text-gray-700 font-semibold">
-              2BHK : {property.twoBHK.price}
+            <span className="text-gray-700 font-semibold ">
+              2BHK : ₹ {property.twoBHK.price}
             </span>
             <FontAwesomeIcon icon={faBed} className="text-gray-500" />
-            <span className="text-gray-500">{property.twoBHK.bedrooms}</span>
+            <span className="text-gray-500 font-serif">{property.twoBHK.bedrooms}</span>
             <FontAwesomeIcon icon={faBath} className="text-gray-500" />
-            <span className="text-gray-500">{property.twoBHK.bathrooms}</span>
+            <span className="text-gray-500 font-serif">{property.twoBHK.bathrooms}</span>
           </div>
         )}
         {property.threeBHK && (
           <div className="flex justify-between items-center mt-2">
             <span className="text-gray-700 font-semibold">
-              3BHK : {property.threeBHK.price}
+              3BHK : ₹ {property.threeBHK.price}
             </span>
             <FontAwesomeIcon icon={faBed} className="text-gray-500" />
-            <span className="text-gray-500">{property.threeBHK.bedrooms}</span>
+            <span className="text-gray-500 font-serif">{property.threeBHK.bedrooms}</span>
             <FontAwesomeIcon icon={faBath} className="text-gray-500" />
-            <span className="text-gray-500">{property.threeBHK.bathrooms}</span>
+            <span className="text-gray-500 font-serif">{property.threeBHK.bathrooms}</span>
           </div>
         )}
       </div>
-      <Link className="p-2 h-10 px-4 self-end rounded-xl text-center uppercasse hover:bg-green-600 text-white bg-blue-400 font-semibold">
+      <Link className="p-2 h-10 px-4 self-end rounded-xl text-center uppercasse hover:bg-green-600 text-white bg-blue-400 font-semibold flex items-center justify-center">
+        <FontAwesomeIcon icon={faForward} className="mr-2" />
         Proceed
       </Link>
     </div>
