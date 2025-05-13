@@ -31,10 +31,10 @@ export default [
         BHK: [
             {
                 id: 1,
-                type: "2BHK",
+                type: "3BHK",
                 price: "48 Lakh",
-                bedrooms: 2,
-                bathrooms: 2,
+                bedrooms: 3,
+                bathrooms: 3,
             }
         ],
         location: "Manish Nagar, Nagpur",
@@ -47,10 +47,10 @@ export default [
         BHK: [
             {
                 id: 1,
-                type: "2BHK",
+                type: "3BHK",
                 price: "65 Lakh",
-                bedrooms: 2,
-                bathrooms: 2,
+                bedrooms: 3,
+                bathrooms: 3,
             }
         ],
         location: "Manish Nagar, Nagpur",
@@ -205,7 +205,55 @@ export default [
             }
         ],
         location: "Plot no 73, Hindustani Colony, Wardha Road, Nagpur",
-        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044711/IMG-20250512-WA0078_hrpohy.jpg',
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044711/IMG-20250512-WA0080_n6brsk.jpg',
+        dealer: "Site Admin",
+    },
+    {
+        id: 13,
+        title: "Anjaneya Heights",
+        BHK: [
+            {
+                id: 1,
+                type: "3BHK",
+                price: "75 Lakh",
+                bedrooms: 3,
+                bathrooms: 3,
+            }
+        ],
+        location: "Plot no 73, Hindustani Colony, Wardha Road, Nagpur",
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044714/IMG-20250512-WA0090_dyears.jpg',
+        dealer: "Site Admin",
+    },
+    {
+        id: 14,
+        title: "Asha Enclave",
+        BHK: [
+            {
+                id: 1,
+                type: "3BHK",
+                price: "71 Lakh",
+                bedrooms: 3,
+                bathrooms: 3,
+            }
+        ],
+        location: "Plot no 73, Hindustani Colony, Wardha Road, Nagpur",
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044714/IMG-20250512-WA0091_n1xki4.jpg',
+        dealer: "Site Admin",
+    },
+    {
+        id: 15,
+        title: "Bougenvillea",
+        BHK: [
+            {
+                id: 1,
+                type: "3BHK",
+                price: "95 Lakh",
+                bedrooms: 3,
+                bathrooms: 3,
+            }
+        ],
+        location: "Plot no 77, Near Milind Complex, Ram Nagar, Nagpur",
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044714/IMG-20250512-WA0090_dyears.jpg',
         dealer: "Site Admin",
     },
 ];
