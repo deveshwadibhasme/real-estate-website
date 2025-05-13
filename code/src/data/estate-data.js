@@ -107,6 +107,29 @@ export default [
     },
     {
         id: 7,
+        title: "Nirmaye Residency",
+        BHK: [
+            {
+                id: 1,
+                type: "2BHK",
+                price: "46 Lakh",
+                bedrooms: 2,
+                bathrooms: 2,
+            },
+            {
+                id: 2,
+                type: "3BHK",
+                price: "63 Lakh",
+                bedrooms: 3,
+                bathrooms: 3,
+            }
+        ],
+        location: "Plot no 73, Hindustani Colony, Wardha Road, Nagpur",
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044713/IMG-20250512-WA0084_d3o2pj.jpg',
+        dealer: "Site Admin",
+    },
+    {
+        id: 8,
         title: "Aayush Ashiyana",
         BHK: [
             {
@@ -122,7 +145,7 @@ export default [
         dealer: "Site Admin",
     },
     {
-        id: 8,
+        id: 9,
         title: "Aayush Shorya",
         BHK: [
             {
@@ -134,7 +157,55 @@ export default [
             }
         ],
         location: "Plot no 73, Hindustani Colony, Wardha Road, Nagpur",
-        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044705/IMG-20250512-WA0055_owugsy.jpg',
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044707/IMG-20250512-WA0064_ysxu4g.jpg',
+        dealer: "Site Admin",
+    },
+    {
+        id: 10,
+        title: "Aayush Square",
+        BHK: [
+            {
+                id: 1,
+                type: "3BHK",
+                price: "1.21 Cr",
+                bedrooms: 3,
+                bathrooms: 3,
+            }
+        ],
+        location: "Plot no 73, Hindustani Colony, Wardha Road, Nagpur",
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044708/IMG-20250512-WA0067_yxefof.jpg',
+        dealer: "Site Admin",
+    },
+    {
+        id: 11,
+        title: "Aayush Vishweshwar",
+        BHK: [
+            {
+                id: 1,
+                type: "3BHK",
+                price: "80 Lakh",
+                bedrooms: 3,
+                bathrooms: 3,
+            }
+        ],
+        location: "Plot no 73, Hindustani Colony, Wardha Road, Nagpur",
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044711/IMG-20250512-WA0078_hrpohy.jpg',
+        dealer: "Site Admin",
+    },
+    {
+        id: 12,
+        title: "Bella Heights",
+        BHK: [
+            {
+                id: 1,
+                type: "4BHK",
+                price: "2.25 Cr",
+                bedrooms: 4,
+                bathrooms: 4,
+            }
+        ],
+        location: "Plot no 73, Hindustani Colony, Wardha Road, Nagpur",
+        imageUrl: 'https://res.cloudinary.com/dl8lyg2ho/image/upload/v1747044711/IMG-20250512-WA0078_hrpohy.jpg',
         dealer: "Site Admin",
     },
 ];
